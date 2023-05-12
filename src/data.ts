@@ -8,7 +8,7 @@ export const sampleProduct: Product[] = [
     images: '../img/pic1.jpg',
     price: 50,
     brand: 'African Print',
-    countInStock: 100,
+    countInStock: 0,
     rating: 4.5,
     description: 'high quality African ware',
     numReviews: 10,
