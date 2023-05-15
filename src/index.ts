@@ -26,14 +26,6 @@ app.use(
   })
 );
 
-// app.get('/api/products', (req: Request, res: Response) => {
-//   res.json(sampleProduct);
-// });
-
-// app.get('/api/products/:slug', (req: Request, res: Response) => {
-//   res.json(sampleProduct.find((x) => x.slug === req.params.slug));
-// });
-
 app.use('/api/products', productRouter);
 app.use('/api/seed', seedRouter);
 
