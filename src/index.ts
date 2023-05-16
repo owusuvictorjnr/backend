@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 import { productRouter } from './routers/productRouter';
+import { userRouter } from './routers/userRouter';
 import { seedRouter } from './routers/seedRouter';
 
 dotenv.config();
@@ -26,7 +27,11 @@ app.use(
   })
 );
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use('/api/products', productRouter);
+app.use('/api/users', userRouter);
 app.use('/api/seed', seedRouter);
 
 const PORT = 4000;
